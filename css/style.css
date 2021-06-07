@@ -1,11 +1,82 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
-	background-image: url('../img/bg.jpg');
+	/* background-image: url('../img/bg.jpg'); */
 }
 
 .container-fluid {
 	height: 100vh;
 }
+
+.sky {
+	height: 100vh;
+	width: 100%;
+	background-image: url('../img/sky.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.road {
+	height: 100px;
+	width: 500%;
+	display: block;
+	background-image: url('../img/wepik-202158-04831.png');
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	/* background-repeat: repeat-x; */
+	animation: road 15s linear infinite;
+}
+
+@keyframes road {
+	100% {
+		transform: translateX(-3000px);
+	}
+}
+
+.city {
+	height: 200px;
+	width: 500%;
+	display: block;
+	background-image: url('../img/city.png');
+	position: absolute;
+	bottom: 100px;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	/* background-repeat: repeat-x; */
+	animation: city 15s linear infinite;
+}
+
+@keyframes city {
+	100% {
+		transform: translateX(-1000px);
+	}
+}
+
+.tube-light {
+	animation: tube-light 5s linear infinite;
+}
+
+@keyframes tube-light {
+	0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+		color: #0e3742;
+		text-shadow: none;
+	}
+
+	100% {
+		color: #fff;
+		text-shadow: 0 0 10px #03bcf4,
+					0 0 20px #03bcf4,
+					0 0 40px #03bcf4,
+					0 0 80px #03bcf4,
+					0 0 160px #03bcf4;
+	}
+}
+
 
 .searchbar{
     background-color: rgba(53, 59, 72, .5);
